@@ -130,7 +130,8 @@ https://www.yuque.com/yuque/developer/api        [文档完整访问路径]
 个人用户认证 超级会员专享权益
 获取 Token 可通过点击语雀的个人头像，并进入 个人设置 页面拿到，如下图：
 
-https://cdn.nlark.com/yuque/0/2023/png/84151/1680345283904-509c590e-b0b3-45a6-a9ff-aedde629b0c9.png?x-oss-process=image%2Fformat%2Cwebp
+![image](https://github.com/user-attachments/assets/daf7caca-ac77-4177-9857-fea0934e0edc)
+
 
 ## 贡献指南
 
