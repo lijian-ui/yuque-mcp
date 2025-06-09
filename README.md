@@ -113,6 +113,7 @@ python server.py --transport sse
 接口域名为 https://www.yuque.com，但要注意访问空间内资源需要使用该空间的子域名。
 
 网址路径：
+
 语雀的网址有一定的格式，比如https://www.yuque.com/yuque/developer/api。
 这里面包含了用户或团队的名称、知识库的标识，以及文档的标识。
 
