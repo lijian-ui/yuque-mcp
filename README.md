@@ -40,7 +40,7 @@ DEFAULT_GROUP_LOGIN=your_group_login_here
 DEFAULT_BOOK_SLUG=your_book_slug_here
 ```
 
-此外，也可以通过客户端请求头传递这些变量，示例配置文件如下：
+此外，也可以通过mcp客户端请求头传递这些变量，示例配置文件如下：
 
 ```json
 {
@@ -127,10 +127,15 @@ https://www.yuque.com/yuque/developer/api        [文档完整访问路径]
 
 语雀所有的开放 API 都需要 Token 验证之后才能访问。
 
-个人用户认证 超级会员专享权益
+### 个人用户认证 超级会员专享权益
 获取 Token 可通过点击语雀的个人头像，并进入 个人设置 页面拿到，如下图：
 
 ![image](https://github.com/user-attachments/assets/daf7caca-ac77-4177-9857-fea0934e0edc)
+
+### 企业团队身份认证 旗舰版空间专享权益
+空间内的团队，可进入团队设置页面进行获取（仅旗舰版空间可使用），如下图。
+![image](https://github.com/user-attachments/assets/4ec55e0e-b0d6-4e69-af83-628578700062)
+
 
 
 ## 贡献指南
