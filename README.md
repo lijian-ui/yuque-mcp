@@ -27,12 +27,14 @@ pip install -r requirements.txt
 
 ### 环境变量配置
 请在项目根目录创建 `.env` 文件，配置以下环境变量：
-- `DEFAULT_API_TOKEN`：语雀 API 访问令牌
-- `DEFAULT_GROUP_LOGIN`：团队的 Login（唯一标识）
-- `DEFAULT_BOOK_SLUG`：知识库的路径标识（slug）
+- `YUQUE_SPACE_SUBDOMAIN`：语雀空间子域名（用于访问语雀空间的URL前缀，如 https://[SUBDOMAIN].yuque.com）
+- `DEFAULT_API_TOKEN`：默认API访问令牌（用于认证调用语雀API的权限）
+- `DEFAULT_GROUP_LOGIN`：默认群组（团队）别名（指定需要访问的语雀群组标识）
+- `DEFAULT_BOOK_SLUG`：默认知识库别名（语雀文档库的唯一标识符，用于定位具体文档库）
 
 示例：
 ```
+YUQUE_SPACE_SUBDOMAIN=your_space_subdomain_here
 DEFAULT_API_TOKEN=your_api_token_here
 DEFAULT_GROUP_LOGIN=your_group_login_here
 DEFAULT_BOOK_SLUG=your_book_slug_here
@@ -46,9 +48,10 @@ DEFAULT_BOOK_SLUG=your_book_slug_here
        "yuque-mcp": {
           "url": "http://192.168.125.89:8000/mcp",
           "headers": {
-              "DEFAULT_API_TOKEN": "M4HeyBFsRmyNDflrqSwzh7BSv23434ysLb7ut3YFPX",
-              "DEFAULT_GROUP_LOGIN": "oxv2347",
-              "DEFAULT_BOOK_SLUG": "v2335y6"
+              "YUQUE_SPACE_SUBDOMAIN": "www",
+              "DEFAULT_API_TOKEN": "M4HeyBFsRmyNDsdfsdfsdf7ut3YFPX",
+              "DEFAULT_GROUP_LOGIN": "oxsdf47",
+              "DEFAULT_BOOK_SLUG": "vfgsd6"
             }
         }
     }
@@ -105,6 +108,29 @@ python server.py
 ```bash
 python server.py --transport sse
 ```
+
+## 语雀文档重要的概念
+接口域名为 https://www.yuque.com，但要注意访问空间内资源需要使用该空间的子域名。
+网址路径：语雀的网址有一定的格式，比如https://www.yuque.com/yuque/developer/api。这里面包含了用户或团队的名称、知识库的标识，以及文档的标识。
+```
+https://www.yuque.com/yuque/developer/api        [文档完整访问路径]
+                        |
+                        +-- yuque/               [团队或用户的登录名(group_login)]
+                                |
+                                +-- developer/   [知识库的标识(book_slug)]
+                                       |
+                                       +-- api   [文档的标识(doc_slug)]
+
+```
+
+## 语雀文档身份认证
+
+语雀所有的开放 API 都需要 Token 验证之后才能访问。
+
+个人用户认证 超级会员专享权益
+获取 Token 可通过点击语雀的个人头像，并进入 个人设置 页面拿到，如下图：
+
+https://cdn.nlark.com/yuque/0/2023/png/84151/1680345283904-509c590e-b0b3-45a6-a9ff-aedde629b0c9.png?x-oss-process=image%2Fformat%2Cwebp
 
 ## 贡献指南
 
