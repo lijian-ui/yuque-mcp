@@ -80,17 +80,16 @@ python server.py --transport streamable-http
 - `create_yuque_group(name: str)`  
   创建语雀知识库中的分组（目录）。
   
-  参数说明:
-  
-     name (str): 要创建的分组名称。该名称在当前知识库中应具有唯一性。
+  参数说明:  
+    * `ame (str)`: 要创建的分组名称。该名称在当前知识库中应具有唯一性。
 
 - `create_yuque_doc_in_group(...)`  
   在指定的语雀知识库中的指定分组下创建一个文档。如果该分组不存在，则会先创建该分组，再在其中创建文档。
   
   参数说明:
-    * group_name (str): 分组名称。如果该分组不存在，将自动创建。
-    * doc_title (str): 要创建的文档的标题。
-    * doc_body (str): 文档的内容，支持 Markdown 格式。
+    * `group_name (str)`: 分组名称。如果该分组不存在，将自动创建。
+    * `doc_title (str)`: 要创建的文档的标题。
+    * `doc_body (str)`: 文档的内容，支持 Markdown 格式。
   
 
 - `get_yuque_doc_list(group_login, book_slug, offset, limit)`  
